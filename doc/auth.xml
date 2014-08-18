@@ -1,0 +1,29 @@
+<Context reloadable="false" docBase="D:\Projects\myWorkSpace\tomcat_pool\webapp">
+	<Resource 
+		name="jdbc/auth"
+		auth="Container"
+		type="javax.sql.DataSource"
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		testWhileIdle="true"
+		testOnBorrow="true"
+		testOnReturn="false"
+		validationQuery="SELECT 1"
+		validationInterval="30000"
+		timeBetweenEvictionRunsMillis="30000"
+		maxActive="20"
+		minIdle="15"
+		maxWait="10000"
+		initialSize="2"
+		removeAbandonedTimeout="60"
+		removeAbandoned="true"
+		logAbandoned="true"
+		minEvictableIdleTimeMillis="30000"
+		jmxEnabled="true"
+		jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
+		username="root"
+		password="root"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:3306/auth"
+		/>
+	<Parameter name="timeTask" value="true" />
+</Context>
